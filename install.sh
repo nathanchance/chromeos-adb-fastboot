@@ -18,6 +18,7 @@ bsdtar -x -f tmp.zip
 
 # Install the tools
 cd platform-tools || ( echo "Unzipping platform-tools failed!"; exit 1 )
+sudo mkdir -p /usr/local/bin /usr/local/lib64
 sudo install adb dmtracedump e2fsdroid etc1tool fastboot hprof-conv make_f2fs mke2fs mke2fs.conf sload_f2fs sqlite3 /usr/local/bin
 sudo install lib64/libc++.so /usr/local/lib64
 
