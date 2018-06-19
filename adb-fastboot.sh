@@ -6,8 +6,8 @@
 # adb and fastboot need to be run as root (to have access to the USB ports).
 # Normally, this would be as easy as 'sudo su fastboot'. The problem is that
 # HOME then becomes /root, which isn't writtable by default (and shouldn't be).
-# The solution becomes to run them with root through `su -c` but pass HOME as
-# the user's actual home directory.
+# The solution is running them with root through `su -c` but pass HOME as the
+# user's actual home directory.
 
 export USER_HOME=${HOME}
 
