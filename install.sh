@@ -27,8 +27,8 @@ cd "${HOME}" || { echo "HOME folder could not be found??"; exit 1; }
 rm -rf "${HOME}/Downloads/aftmp"
 
 # Get current version of adb-fastboot and install it
-curl -s https://raw.githubusercontent.com/nathanchance/chromeos-adb-fastboot/master/adb-fastboot.sh -o ${HOME}/adb-fastboot.sh
-if ! grep -q adb-fastboot ${HOME}/.bashrc; then
-    echo "[[ -f \${HOME}/adb-fastboot.sh ]] && source \${HOME}/adb-fastboot.sh" >> ${HOME}/.bashrc
+curl -s https://raw.githubusercontent.com/nathanchance/chromeos-adb-fastboot/master/adb-fastboot.sh -o "${HOME}/adb-fastboot.sh"
+if ! grep -q adb-fastboot "${HOME}/.bashrc"; then
+    echo "[[ -f \${HOME}/adb-fastboot.sh ]] && source \${HOME}/adb-fastboot.sh" >> "${HOME}/.bashrc"
 fi
 echo "Installation complete! Please run 'source ~/.bashrc' now."
