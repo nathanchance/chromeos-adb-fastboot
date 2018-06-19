@@ -16,7 +16,7 @@ To put your device into developer mode, find your device on [this website](https
 
 crosh, the Chrome OS shell, is your gateway to adb/fastboot. To open crosh, hit Ctrl-Alt-T. By default, crosh is a sandboxed shell, meaning you have a limited number of commands and access to the unlying filesystem. We need to go into the next level so to speak. Next, you will type `shell`; this is a true command prompt where we are going to run all of our commands.
 
-At this point, I will recommend setting a sudo password so that if your device is ever compromised, there is some level of protection. Type `sudo su -` to get into a root shell (this should require no password), type `chromeos-setdevpasswd`, then set your password. After this, `sudo` commands will require that password.
+At this point, I will recommend setting a sudo password so that if your device is ever compromised, there is some level of protection. Type `sudo su -` to get into a root shell (this should require no password), type `chromeos-setdevpasswd`, set your password, then type `exit`. After this, `sudo` commands will require that password.
 
 Further reading: https://www.chromium.org/chromium-os/poking-around-your-chrome-os-device
 
