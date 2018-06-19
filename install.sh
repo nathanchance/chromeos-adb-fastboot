@@ -25,6 +25,9 @@ function warn() {
     echo -e "\033[0m"
 }
 
+# This script must NOT be run as root
+[[ "$(whoami)" = "root" ]] && die "Do NOT run this script as root! Type 'exit' to get back to regular shell."
+
 # Move to user's download directory and make a temporary folder
 mkdir -p "${HOME}/Downloads/aftmp" || die "Temporary folder in Downloads could not be made!"
 cd "${HOME}/Downloads/aftmp" || die "Temporary folder in Downloads could not be made!"
