@@ -34,8 +34,8 @@ To install, run `curl -s https://raw.githubusercontent.com/nathanchance/chromeos
 
 Alternatively, if piping things from curl to bash scares you, you can run `cd ${HOME}/Downloads; curl -s https://raw.githubusercontent.com/nathanchance/chromeos-adb-fastboot/master/install.sh -o install.sh`, inspect it with `more` or `vim`, then run `chmod +x install.sh; bash install.sh`.
 
-To verify the installation was successful, run `adb --version` and `fastboot --version`. These should say they have been installed to `/usr/local/bin`. If they don't say that or they error, do a reboot before trying again.
+To verify the installation was successful, run `adb --version` and `fastboot --version`. These should say they have been installed to `/usr/local/bin`. If there is an issue with running `adb`/`fastboot` (like not seeing a verification prompt on your phone/getting an unauthorized device with `adb devices`, be sure to reboot both devices before reporting any issues.
 
 # Getting support
 
-Open an issue on this repo.
+Open an issue on this repo. Please include type of device, [a screenshot](https://www.take-a-screenshot.org/chrome-os.html)/copy paste of your commands you are running, and the output of `adb --version` and `fastboot --version` (you can use a service like [del.dog](https://del.dog) for this).
