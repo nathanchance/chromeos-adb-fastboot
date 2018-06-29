@@ -32,12 +32,8 @@ function warn() {
 mkdir -p "${HOME}/Downloads/aftmp" || die "Temporary folder in Downloads could not be made!"
 cd "${HOME}/Downloads/aftmp" || die "Temporary folder in Downloads could not be made!"
 
-# Get the proper URL of the platform tools (the one below is just a redirect
-URL=$(curl -s https://dl.google.com/android/repository/platform-tools-latest-linux.zip | cut -d \" -f 2)
-[[ -z ${URL} ]] && die "platform-tools URL could not be determined!"
-
 # Download the latest zip
-curl -s "${URL}" -o tmp.zip || die "platform-tools could not be downloaded!"
+curl -Ls "https://dl.google.com/android/repository/platform-tools-latest-linux.zip" -o tmp.zip || die "platform-tools could not be downloaded!"
 
 # Unzip the latest tools
 bsdtar -x -f tmp.zip || die "platform-tools zip could not be unzipped!"
